@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeristiano\Atals\controller;
+namespace Jeristiano\AtlasLog\controller;
 use Jeristiano\AtlasLog\model\Log as LogModel;
 use think\paginator\driver\Bootstrap as BootstrapPaginator;
 

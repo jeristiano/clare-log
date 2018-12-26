@@ -1,2 +1,2 @@
 <?php
-\think\Route::get('/logs','Jeristiano\AtalsLog\controller\Log@show');
+\think\Route::get('/logs','Jeristiano\AtlasLog\controller\Log@show');

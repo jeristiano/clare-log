@@ -3,6 +3,7 @@
   "description": "display your log online",
   "license": "Apache-2.0",
   "minimum-stability": "dev",
+  "type":"think-extend",
   "version": "1.0",
   "authors": [
     {

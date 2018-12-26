@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>越南棋牌 - PowerBy PHP</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../static/css/app.css" rel="stylesheet">
+	<link rel="icon" href="https://hkserver.game.luckycatgame.com/h5/debugVersion/icon_36.jpg" sizes="32x32">
+	<style>
+
+		a { color: #333 }
+		.list-group-item.active { background-color: orange; border-color: orange; }
+		body{background: #f1f4f6;font-family: "Microsoft YaHei UI";}
+	</style>
+</head>
+<body>
+
+<div class="container-fluid" style="width: 80%" >
+	<div class="row">
+		<div class="col-sm-3">
+			<h3>
+				<img src="../../static/img/logo.png" style="width:42px;" alt="">
+				<span>越南棋牌日志</span>
+			</h3>
+		</div>
+
+	</div>
+	<div class="row" >
+		<div class="col-xs-3">
+			<ul class="list-group">
+				{volist name="files" id="file"}
+				<li class="list-group-item {$file['real'] == $default ? 'active' : ''}">
+					<a href="?file={$file['real']}">{$file['name']}</a>
+				</li>
+				{/volist}
+			</ul>
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li>
+						<a href="?menu_page={$menu.previous}" aria-label="Previous">
+							<span aria-hidden="true">上一页</span>
+						</a>
+					</li>
+					<li><a href="#">{$menu.current_page}</a></li>
+					<li>
+						<a href="?menu_page={$menu.next}" aria-label="Next">
+							<span aria-hidden="true">下一页</span>
+						</a>
+					</li>
+					<li><span aria-hidden="true">共{$menu.total}页</span></li>
+				</ul>
+
+			</nav>
+		</div>
+		<div class="col-sm-9">
+				{volist name="data['data']" id="log"}
+					<pre class="language-all">
+						<code class="language-all">
+							{:implode('<br>',$log)}
+						</code>
+				</pre>
+				{/volist}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 text-right">
+			{:htmlspecialchars_decode($paginator)}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+
+			<h4 class="text-right" style="line-height: 120px;">
+				<img src="../../static/img/logo.png" style="width:42px;" alt=""> Vietnam-Poker</h4>
+		</div>
+	</div>
+</div>
+</body>
+</html>

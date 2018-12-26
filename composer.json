@@ -1,0 +1,32 @@
+{
+  "name": "jeristiano/clare-log",
+  "description": "display your log online",
+  "license": "Apache-2.0",
+  "minimum-stability": "dev",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "jeristiano",
+      "email": "jeremykuang@foxmail.com"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.4.0",
+    "topthink/think-helper": ">=1.0.4",
+    "topthink/think-installer": ">=1.0.10",
+  },
+  "autoload": {
+    "psr-4": {
+      "jeristiano\\AtlasLog": "src/"
+    },
+    "files": [
+      "src/route.php"
+    ]
+  },
+  "extra": {
+    "think-config": {
+      "maintain": "src/config.php"
+    }
+  }
+}
